@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Inter:wght@500&family=Nanum+Gothic+Coding&family=Roboto:wght@500&family=Rubik&family=Share+Tech&family=Source+Code+Pro&family=Ubuntu:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Source Code Pro', monospace;
+}
+
+
+.divf {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fdirc {
+    flex-direction: column;
+}
+
+.jusSpaceB {
+    justify-content: space-between;
+}
+
+.posR {
+    position: relative;
+}
+
+.fullWH {
+    width: 100%;
+    height: 100%;
+}
+
+.mainbg {
+    position: relative;
+    width: 100vw;
+    min-height: 100vh;
+    /* background-image: url("../assets/bg1.avif");
+    background-position: 0;
+    background-repeat: no-repeat;
+    background-size: cover; */
+    /* filter: blur(1rem); */
+    /* box-shadow: 0 0 transparent; */
+    background: #272640;
+    padding-top: 3rem;
+    height: 100%;
+}
+
+.lights {
+    position: absolute;
+    top: 30%;
+    left: 20%;
+    width: 5rem;
+    height: 0.1rem;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.lights::before {
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    width: 1rem;
+    height: 1rem;
+    transform: translate(-50%, -50%);
+    background: white;
+    left: 0;
+    top: 0;
+    border-radius: 50%;
+}
+
+
+
+.hackerImg {
+    width: 20rem;
+}
