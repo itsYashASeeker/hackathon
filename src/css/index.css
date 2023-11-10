@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Inter:wght@500&family=Nanum+Gothic+Coding&family=Roboto:wght@500&family=Rubik&family=Share+Tech&family=Source+Code+Pro&family=Ubuntu:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Inter:wght@500&family=Nanum+Gothic+Coding&family=Press+Start+2P&family=Roboto:wght@500&family=Rubik&family=Share+Tech&family=Source+Code+Pro&family=Ubuntu:wght@300&display=swap');
 
 * {
     margin: 0;
@@ -31,9 +31,43 @@
     height: 100%;
 }
 
+.cursor-dot {
+    z-index: 100000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    width: 1rem;
+    height: 1rem;
+    background: rgb(0, 183, 255);
+    box-shadow: 0 0 0.2rem 0.3rem rgb(176, 233, 255);
+}
+
+.specB1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 0.3rem 0.5rem;
+    border-radius: 0.5rem;
+
+    border: none;
+    outline: none;
+    transition: 0.3s all ease-out;
+    border-left: 0.3rem dashed black;
+    border-right: 0.3rem dashed black;
+    border-top: 0.1rem solid black;
+    border-bottom: 0.1rem solid black;
+}
+
+.specB1:hover {
+    border-bottom: 0.3rem solid rgb(0, 60, 255);
+    color: rgb(0, 60, 255);
+    /* background: black;
+    color: white; */
+}
+
 .mainbg {
     position: relative;
-    width: 100vw;
+    width: 100%;
     min-height: 100vh;
     /* background-image: url("../assets/bg1.avif");
     background-position: 0;
@@ -42,8 +76,27 @@
     /* filter: blur(1rem); */
     /* box-shadow: 0 0 transparent; */
     background: #272640;
+    background: black;
     padding-top: 3rem;
     height: 100%;
+}
+
+.MidCH{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    gap: 1.4rem;
+}
+
+.blendContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: calc(100vh);
+    width: 100%;
+    z-index: 100;
+    /* transition: 2s all ease-out; */
 }
 
 .lights {
@@ -73,4 +126,249 @@
 
 .hackerImg {
     width: 20rem;
+}
+
+
+.header3d {
+    /* position: absolute;
+    top: 25%;
+    left: 50%; */
+    z-index: 2;
+    /* transform: translate(-50%, -50%); */
+    color: white;
+    background: rgba(255, 255, 255, 0.05);
+    background: linear-gradient(rgba(128, 0, 128, 0.2), rgba(0, 0, 255, 0.1), rgba(0, 236, 0, 0.1), rgba(0, 41, 226, 0.1));
+    backdrop-filter: blur(0.2rem);
+    padding: 0.3rem 1.5rem;
+
+    font-size: 6rem;
+    font-weight: bold;
+    border-radius: 0.8rem;
+    animation: animHeader3d 0.4s cubic-bezier(0.1, 0.4, 0.8, 1);
+    margin-bottom: 2rem;
+    /* transition: 0.8s all cubic-bezier(0.1, 0.2, 0.3, 1); */
+    /* transition-delay: 0.1s; */
+}
+
+.inHack {
+    font-family: "Press Start 2P", "serif";
+    text-shadow: 0.5rem 0.2rem 1rem rgb(234, 0, 255);
+    /* line-height: 4rem; */
+}
+
+.inMela {
+    font-family: "Press Start 2P", "serif";
+    text-shadow: 0.5rem 0.2rem 1rem rgb(17, 0, 255);
+}
+
+@keyframes animHeader3d {
+    0% {
+        font-size: 40rem;
+    }
+
+    100% {
+        font-size: 7rem;
+    }
+}
+
+.learnMoreB {
+    position: absolute;
+    right: 2rem;
+    bottom: 2rem;
+
+}
+
+.countD{
+    padding: 0.8rem;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 1rem;
+    gap: 0.5rem;
+    backdrop-filter: blur(0.5rem);
+}
+
+.fColon{
+    font-weight: bold;
+    font-size: 1rem;
+    color: white;
+}
+
+.countCard{
+    background: rgba(255, 255, 255, 0.9);
+    padding: 0.4rem;
+    font-size: 1.3rem;
+    border-radius: 1rem;
+    font-weight: bold;
+}
+
+.registerH {
+    /* position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+    padding: 0.3rem 1rem;
+    margin-top: 0.5rem;
+    border: 0.2rem solid white;
+    background: #2368fb;
+    color: white;
+    outline: 0;
+    font-size: 1.8rem;
+    cursor: pointer;
+    transition: 0.2s all ease-out;
+}
+
+.registerH:hover {
+    border-radius: 1.5rem;
+}
+
+.expandDotB {
+    position: absolute;
+    width: 0;
+    height: 0;
+}
+
+.doExpandDot {
+    /* box-shadow: 0 0 20rem 0.1rem white; */
+
+    background: black;
+    border-radius: 50%;
+    animation: expandD 1s normal linear;
+    z-index: 20000;
+    box-shadow: 0 0 0.1rem 60vw rgb(0, 0, 0);
+}
+
+@keyframes expandD {
+    0% {
+        /* border-radius: 50%; */
+        box-shadow: 0 0 0 0 rgb(0, 0, 0);
+    }
+
+    100% {
+        /* border-radius: 100%; */
+        box-shadow: 0 0 0.1rem 60vw rgb(0, 0, 0);
+    }
+}
+
+.loadBeB {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    /* background: ; */
+    color: white;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.2);
+    transition: all 1s ease-out;
+    gap: 1rem;
+}
+
+.loadBeB logo1 {
+    height: 5rem;
+}
+
+.loadBeB .pres {
+    font-size: 3rem;
+}
+
+.loaderAnim {
+    z-index: 10000;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    gap: 1rem;
+    z-index: 100;
+}
+
+.loaderAnim .lP {
+    color: white;
+    font-size: 1.5rem;
+    animation: blinkText infinite 0.9s linear;
+}
+
+@keyframes blinkText {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.loaderAnim .ac {
+    position: relative;
+    border-radius: 0.8rem;
+    /* position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+    width: 20rem;
+    height: 1.5rem;
+    background: rgb(80, 80, 80);
+    border: 0.2rem solid rgb(0, 255, 0);
+    box-shadow: 0 0 0.7rem 0rem rgba(17, 255, 17, 1);
+    color: white;
+    overflow: hidden;
+    /* animation: expandA1 infinite 2s linear; */
+}
+
+.loaderAnim .ac::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgb(76, 253, 76);
+    width: 100%;
+    height: 100%;
+    animation: progressB infinite 10s linear;
+}
+
+@keyframes progressB {
+    0% {
+        width: 0%;
+    }
+
+    10% {
+        width: 10%;
+    }
+
+    20% {
+        width: 20%;
+    }
+
+    30% {
+        width: 30%;
+    }
+
+    40% {
+        width: 40%;
+    }
+
+    50% {
+        width: 50%;
+    }
+
+    60% {
+        width: 60%;
+    }
+
+    70% {
+        width: 70%;
+    }
+
+    80% {
+        width: 80%;
+    }
+
+    90% {
+        width: 90%;
+    }
+
+    100% {
+        width: 100%;
+    }
 }
