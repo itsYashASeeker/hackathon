@@ -11,9 +11,24 @@
     flex-direction: row-reverse;
 }
 
+.navInfo {
+    flex-direction: row;
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(0.5rem);
+    padding: 0.5rem 1rem;
+}
+
+.navIReg {
+    padding: 0.3rem 0.5rem;
+
+    border: 0.12rem solid white;
+    border-radius: 0.5rem;
+    font-size: 1.1rem;
+}
+
 .logo1 {
     /* width: 2.5rem; */
-    height: 2.2rem;
+    height: 2.4rem;
     background: white;
     border-radius: 0.2rem;
     padding: 0.2rem 0.3rem;
@@ -25,4 +40,33 @@
 
 .logoCon {
     gap: 0.3rem;
+}
+
+.allLinks {
+    gap: 0.7rem;
+}
+
+.allLinks a {
+    font-size: 1.1rem;
+    color: white;
+    text-decoration: none;
+    transition: 0.2s all ease-out;
+    padding: 0.3rem 0.3rem;
+}
+
+.aRN {
+    background: rgba(2, 0, 128, 1);
+    font-weight: bold;
+}
+
+.aRN:hover {
+    background: rgba(2, 0, 128, 1) !important;
+    cursor: default;
+}
+
+.allLinks a:hover {
+    /* text-decoration: dashed; */
+    /* text-decoration-color: blue; */
+    /* text-decoration-line: underline; */
+    background: rgba(2, 0, 128, 0.6);
 }

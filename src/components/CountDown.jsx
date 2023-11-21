@@ -39,22 +39,22 @@ export default function CountDown() {
             <div className="divf countD">
                 <div className="countCard divf fdirc">
                     <p>{leading0(timeL.days)}</p>
-                    <p>Days</p>
+                    <p className="countTit">Days</p>
                 </div>
                 <p className="fColon">:</p>
                 <div className="countCard divf fdirc">
                     <p>{leading0(timeL.hours)}</p>
-                    <p>Hours</p>
+                    <p className="countTit">Hours</p>
                 </div>
                 <p className="fColon">:</p>
                 <div className="countCard divf fdirc">
                     <p>{leading0(timeL.minutes)}</p>
-                    <p>Minutes</p>
+                    <p className="countTit">Minutes</p>
                 </div>
                 <p className="fColon">:</p>
                 <div className="countCard divf fdirc">
                     <p>{leading0(timeL.seconds)}</p>
-                    <p>Seconds</p>
+                    <p className="countTit">Seconds</p>
                 </div>
             </div>
         </>

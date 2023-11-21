@@ -13,7 +13,7 @@ import IETLogo from "../assets/IET_LOGO.png";
 import postmanLogo from "../assets/postman_logo.png";
 import { useNavigate } from "react-router-dom";
 import CountDown from "./CountDown";
-
+import { motion } from "framer-motion"
 
 
 // Extend will make OrbitControls available as a JSX element called orbitControls for us to use.
@@ -33,12 +33,28 @@ function LoaderBeforeModel() {
                 </div>
 
                 <div className="loadBeB divf fdirc">
-                    <div className="divf logoCon">
-                        <img src={IETLogo} className="logo1" />
-                        <p className="xForLogo">X</p>
-                        <img src={postmanLogo} className="logo1" />
+                    <div className="divf logoCon loadBeDI">
+                        <motion.img
+                            initial={{ x: -40 }}
+                            whileInView={{ x: 0 }}
+                            transition={{ duration: 0.4, ease: "easeOut", type: "spring" }}
+                            src={IETLogo} className="logo1" />
+                        <p className="xForLogo"
+                            initial={{ scale: 0 }}
+                            whileInView={{ scale: 1 }}
+                            transition={{ duration: 0.2, delay: 0.4, ease: "easeOut", type: "spring" }}
+                        >X</p>
+                        <motion.img
+                            initial={{ x: 40 }}
+                            whileInView={{ x: 0 }}
+                            transition={{ duration: 0.4, ease: "easeOut", type: "spring" }}
+                            src={postmanLogo} className="logo1" />
                     </div>
-                    <p className="pres">Presents....</p>
+                    <p
+                        initial={{ y: -40 }}
+                        whileInView={{ y: 0 }}
+                        transition={{ duration: 0.5, delay: 1, ease: "easeOut", type: "spring" }}
+                        className="pres">Presents....</p>
                 </div>
             </div>
         </>
@@ -48,7 +64,7 @@ function LoaderBeforeModel() {
 function LoadTheModel() {
     return (
         <>
-            <div className="mainContainer">
+            <div id="idLoadM" className="mainContainer">
                 <div class="lines">
                     <div class="line"></div>
                     <div class="line"></div>
@@ -83,34 +99,25 @@ export default function Home() {
 
     const learnMoreC = (e) => {
         var cursDot = document.getElementById("idExDot")
-        const posX = e.clientX;
-        const posY = e.clientY;
-
-        cursDot.style.left = `${posX}px`;
-        cursDot.style.top = `${posY}px`;
         cursDot.classList.add("doExpandDot")
         setTimeout(() => {
-
-        })
+            navigate("/info")
+        }, 1000);
     }
 
     useEffect(() => {
         let unmounted = false;
         setTimeout(() => {
-            // hello
             setHomeB(false);
         }, 3000)
-
         return () => (unmounted = true);
     }, [])
 
     useEffect(() => {
         let unmounted = false;
         setTimeout(() => {
-            // hello
             setHTitle(true);
         }, 8000)
-
         return () => (unmounted = true);
     }, [])
 

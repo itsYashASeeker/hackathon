@@ -12,7 +12,7 @@ import { useGLTF } from '@react-three/drei'
 import { useFrame } from '@react-three/fiber'
 
 export function ModelC(props) {
-  const { nodes, materials } = useGLTF('/end_of_line_club.glb')
+  const { nodes, materials } = useGLTF('/public/end_of_line_club.glb')
   const ref = useRef()
   useFrame((_, delta) => {
     ref.current.rotation.y += 0.3 * delta
@@ -35,4 +35,4 @@ export function ModelC(props) {
   )
 }
 
-useGLTF.preload('/end_of_line_club.glb')
+useGLTF.preload('/public/end_of_line_club.glb')
