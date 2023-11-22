@@ -164,7 +164,7 @@ export default function Home() {
                     } */}
                             <BgOptional />
                             {/* <div > */}
-                            <Suspense fallback={<null />}>
+                            {/* <Suspense fallback={<null />}>
                                 <Canvas id="canvas">
                                     <ambientLight />
                                     <OrbitControls
@@ -178,7 +178,7 @@ export default function Home() {
                                     <Environment preset="sunset" background />
 
                                 </Canvas>
-                            </Suspense>
+                            </Suspense> */}
                             {/* </div> */}
 
 
