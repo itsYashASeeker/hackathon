@@ -7,12 +7,18 @@ Source: https://sketchfab.com/3d-models/end-of-line-club-8d1fd319d2b74c36bcfa8d4
 Title: End Of Line Club
 */
 
-import React, { useRef } from 'react'
+import React, { useMemo, useRef, useState } from 'react'
 import { useGLTF } from '@react-three/drei'
-import { useFrame } from '@react-three/fiber'
+import { useFrame, useGraph } from '@react-three/fiber'
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
+import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader'
+import { useLoader, useThree } from '@react-three/fiber';
+import { SkeletonUtils } from "three-stdlib"
 
 export function ModelC(props) {
-  const { nodes, materials } = useGLTF('/end_of_line_club.glb')
+
+
+  // const { nodes, materials } = useGLTF('/end_of_line_club.glb', GLTFLoader)
   const ref = useRef()
   useFrame((_, delta) => {
     ref.current.rotation.y += 0.3 * delta
@@ -20,19 +26,69 @@ export function ModelC(props) {
     ref.current.rotation.z = 0
     // ref.current.rotation.y += 0.5 * delta
   })
+  // return (
+  //   <group {...props} dispose={null} ref={ref}>
+  //     <group scale={0.12}>
+  //       <group >
+  //         <mesh geometry={nodes.BarWalls_low_BarArea_Shdr_0.geometry} material={materials.BarArea_Shdr} scale={0.033} />
+  //         <mesh geometry={nodes.EntranceMain_low_EntranceMain_Shdr1_0.geometry} material={materials.EntranceMain_Shdr1} scale={0.033} />
+  //         <mesh geometry={nodes.WallGen_low_WallGen_Shdr_0.geometry} material={materials.WallGen_Shdr} scale={0.033} />
+  //         <mesh geometry={nodes.BarCity_1_blinn9_0.geometry} material={materials.blinn9} scale={0.033} />
+  //         <mesh geometry={nodes.CenterFloor_low_CanterArea_Shdr1_0.geometry} material={materials.CanterArea_Shdr1} scale={0.033} />
+  //       </group>
+
+  //     </group>
+  //   </group>
+  // )
+
+  const gltf = useLoader(GLTFLoader, "/end_of_line_club.glb");
+
+  const clonedObjects = useMemo(() => {
+    if (gltf && gltf.scene) {
+      // Assuming you want to clone a specific mesh or group within the loaded model
+      const objectToClone = gltf.scene.getObjectByName(gltf); // Replace 'ObjectNameToClone' with the actual name
+
+      if (objectToClone) {
+        const clone = SkeletonUtils.clone(objectToClone);
+        return clone;
+      }
+    }
+    return null;
+  }, [gltf]);
+
+  // const clone = useMemo(() => SkeletonUtils.Object.assign(scene), [scene])
+  // const { nodes, materials } = useGraph(clone)
+
+  console.log(gltf);
+
   return (
+    // <group {...props} dispose={null} ref={ref}>
+    //   <group scale={0.12}>
+    //     {gltf && gltf.scene && (
+    //       <group>
+    //         {/* Your custom meshes or groups within the loaded model */}
+    //         <mesh geometry={...} material={...} />
+    //         <group>
+    //           {/* other nested groups or meshes */}
+    //         </group>
+    //       </group>
+    //     )}
+    //   </group>
+    // </group>
     <group {...props} dispose={null} ref={ref}>
       <group scale={0.12}>
-        <group >
-          <mesh geometry={nodes.BarWalls_low_BarArea_Shdr_0.geometry} material={materials.BarArea_Shdr} scale={0.033} />
-          <mesh geometry={nodes.EntranceMain_low_EntranceMain_Shdr1_0.geometry} material={materials.EntranceMain_Shdr1} scale={0.033} />
-          <mesh geometry={nodes.WallGen_low_WallGen_Shdr_0.geometry} material={materials.WallGen_Shdr} scale={0.033} />
-          <mesh geometry={nodes.BarCity_1_blinn9_0.geometry} material={materials.blinn9} scale={0.033} />
-          <mesh geometry={nodes.CenterFloor_low_CanterArea_Shdr1_0.geometry} material={materials.CanterArea_Shdr1} scale={0.033} />
-        </group>
+        {gltf && gltf.scene ?
+          <group >
+            <mesh geometry={gltf.nodes.BarWalls_low_BarArea_Shdr_0.geometry} material={gltf.materials.BarArea_Shdr} scale={0.033} />
+            <mesh geometry={gltf.nodes.EntranceMain_low_EntranceMain_Shdr1_0.geometry} material={gltf.materials.EntranceMain_Shdr1} scale={0.033} />
+            <mesh geometry={gltf.nodes.WallGen_low_WallGen_Shdr_0.geometry} material={gltf.materials.WallGen_Shdr} scale={0.033} />
+            <mesh geometry={gltf.nodes.BarCity_1_blinn9_0.geometry} material={gltf.materials.blinn9} scale={0.033} />
+            <mesh geometry={gltf.nodes.CenterFloor_low_CanterArea_Shdr1_0.geometry} material={gltf.materials.CanterArea_Shdr1} scale={0.033} />
+          </group>
+          : <></>}
       </group>
     </group>
-  )
+  );
 }
 
-useGLTF.preload('/end_of_line_club.glb')
+// useGLTF.preload('/end_of_line_club.glb')
