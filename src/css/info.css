@@ -5,6 +5,7 @@ body {}
     padding: 4rem 2rem;
     color: white;
     z-index: 99;
+    gap: 1rem;
     /* overflow: scroll; */
     /* gap: 1rem; */
 }
@@ -17,7 +18,7 @@ body {}
     padding: 1rem 1rem;
     flex-wrap: wrap;
     min-height: 1rem;
-    min-height: 100vh;
+    /* min-height: 100vh; */
 }
 
 .alignL {
@@ -28,16 +29,33 @@ body {}
 }
 
 .mainH {
-    background: white;
-    color: black;
+    background: rgb(31, 30, 30);
+    color: aqua;
     width: fit-content;
     font-size: 2rem;
     padding: 0.3rem 0.5rem;
     border-radius: 0.4rem;
     overflow-wrap: break-word;
     font-weight: bold;
-    text-shadow: 0 0 0.5rem purple;
+    text-shadow: 0 0 0.1rem rgb(202, 7, 202);
+    animation: animMainH 2s infinite linear;
 }
+
+@keyframes animMainH {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
 
 .mainCon {
     /* min-width: 1rem;
@@ -52,7 +70,8 @@ body {}
     min-width: 1rem;
     /* width: fit-content; */
     padding: 2rem 1rem;
-    background: linear-gradient(rgb(24, 24, 24), rgb(34, 33, 33), rgb(51, 51, 51));
+    background: linear-gradient(rgb(24, 24, 24), rgb(17, 17, 17), rgb(31, 31, 31));
+    background: rgba(12, 12, 12, 0.1);
     border-radius: 0.7rem;
     backdrop-filter: blur(1rem);
     min-height: 1rem;
@@ -125,6 +144,63 @@ body {}
     opacity: 1;
 }
 
+.allTypeS {
+    margin: 1rem;
+    gap: 1.5rem;
+}
+
+
+
+
+.typeSpon {
+    --typeC: white;
+    position: relative;
+    border: 0.14rem solid var(--typeC);
+    padding: 1rem;
+    padding-left: 2rem;
+    overflow: hidden;
+    border-radius: 1rem;
+    /* max-width: 50rem; */
+    width: 90%;
+    /* margin: 1rem; */
+}
+
+.typeSpon .mainTS {
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+
+    font-size: 1.4rem;
+    font-weight: 600;
+    max-width: 1rem;
+    height: 100%;
+    overflow-wrap: break-word;
+    background: var(--typeC);
+    color: black;
+    padding: 0.8rem;
+}
+
+.typeSpon:hover {
+    background: black;
+    transform: scale(1.01);
+}
+
+
+.gold {
+    /* border: 0.14rem solid #FFD700; */
+    --typeC: #FFD700;
+}
+
+.silver {
+    --typeC: #C0C0C0;
+}
+
+.bronze {
+    --typeC: #CD7F32;
+}
+
+
 .allSpons {
     flex-wrap: wrap;
     gap: 2rem;
@@ -142,5 +218,200 @@ body {}
 }
 
 .sponC:hover {
-    transform: scale(1.05);
+    transform: scale(1.01);
+    /* background: none; */
+
+}
+
+.aboutHM {
+    padding: 2rem;
+    gap: 1.3rem;
+}
+
+/* .aboutCoM{
+    gap: 1rem;
+} */
+
+.hackTitle {
+    border-radius: 50%;
+    width: 12rem;
+    height: 12rem;
+    box-shadow: 0 0 1rem rgba(219, 219, 219, 0.2);
+}
+
+.abhmdesc {
+    max-width: 95%;
+    line-height: 1.6rem;
+    font-size: 1.2rem;
+    /* max-width: 50%; */
+}
+
+
+
+
+.allCAbH {
+    padding-top: 1rem;
+    gap: 1.8rem;
+    /* margin: 1rem 0; */
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.indCard {
+    position: relative;
+    border-radius: 50%;
+    background: linear-gradient(50deg, rgb(178, 240, 255), rgb(100, 224, 255), rgb(20, 208, 255));
+    background: linear-gradient(50deg, rgb(0, 34, 41), rgb(14, 57, 66), rgb(0, 88, 110));
+    color: black;
+    color: white;
+    padding: 0.5rem;
+    width: 11rem;
+    height: 11rem;
+    box-shadow: 0 0 0.5rem rgba(255, 255, 255, 0.8);
+    border: 0.15rem solid rgba(255, 255, 255, 0.5);
+    flex-wrap: wrap;
+    transition: 0.2s all ease-out;
+}
+
+.indCard:hover {
+    transform: scale(1.03);
+}
+
+.indCHead {
+    position: absolute;
+    top: 1.8rem;
+    left: 50%;
+    transform: translateX(-50%);
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+
+
+
+
+.indCMain {
+    position: absolute;
+    top: 4.5rem;
+    left: 50%;
+    width: 100%;
+    transform: translateX(-50%);
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.khaaskjsit {
+    top: 4rem;
+    font-size: 1.1rem;
+}
+
+
+
+
+.allPr {
+    margin-top: 2rem;
+    gap: 1.5rem;
+    align-items: end;
+}
+
+.Prize {
+    position: relative;
+    background: black;
+    border: 0.15rem solid rgb(255, 255, 255);
+    box-shadow: 0 0 0.7rem var(--typeC);
+    /* padding: 0.5rem; */
+    overflow: hidden;
+    border-radius: 1rem;
+    padding-top: 2rem;
+    width: 13rem;
+    height: 20rem;
+    --bgForMed: rgb(0, 224, 224);
+    transition: 0.3s all ease-out;
+}
+
+.Prize:hover {
+    box-shadow: 0 0 1rem var(--typeC);
+    --bgForMed: rgb(0, 255, 255);
+}
+
+.allPr .prSil {
+    width: 11rem;
+    height: 18rem;
+}
+
+.allPr .prBro {
+    width: 10rem;
+    height: 16rem;
+}
+
+.pH1 {
+    color: var(--typeC);
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.pH2 {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.pH2 .rupeeS {
+    font-size: 1.5rem;
+    margin-right: 0.3rem;
+}
+
+.tCont {
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+    padding-top: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    width: 100%;
+    overflow: hidden;
+
+    /* --bgForMed: rgb(0, 36, 36); */
+}
+
+
+
+.trophy {
+    position: relative;
+    width: 8rem;
+    height: 100%;
+    z-index: 10;
+
+}
+
+.silver .trophy {
+    width: 7rem;
+}
+
+.bronze .trophy {
+    width: 6rem;
+}
+
+.tCont::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    background: var(--bgForMed);
+}
+
+.tCont::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    /* border-radius: 50%; */
+    width: 100%;
+    height: 100%;
+    background: var(--bgForMed);
 }

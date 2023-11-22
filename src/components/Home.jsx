@@ -82,6 +82,26 @@ function LoadTheModel() {
     )
 }
 
+export function BgOptional() {
+    return (
+        <div id="idOptMB" className="mainContainer mainToBack">
+            <div className="blurAn">
+                <div className="b1"></div>
+                <div className="b2"></div>
+            </div>
+            <div class="lines">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+
+
+        </div>
+    )
+}
+
 
 export default function Home() {
 
@@ -117,7 +137,7 @@ export default function Home() {
         let unmounted = false;
         setTimeout(() => {
             setHTitle(true);
-        }, 8000)
+        }, 2000)
         return () => (unmounted = true);
     }, [])
 
@@ -133,39 +153,47 @@ export default function Home() {
                     <LoaderBeforeModel />
                     :
                     <></>}
+                {hTitle ?
+                    <>
+                        <Navbar />
+                        <div className="mainC blendContainer">
 
-                <div className="mainC posR blendContainer">
-                    {hTitle ?
-                        <Navbar /> : <></>}
-
-                    <Suspense fallback={<LoadTheModel />}>
-                        <Canvas >
-                            <ambientLight />
-                            <OrbitControls
-                                enableZoom={false}
-                                enableDamping={false}
-                                enableRotate={false}
-                            />
-
-                            <ModelC />
-
-                            <Environment preset="sunset" background />
-
-                        </Canvas>
-                    </Suspense>
-                    {hTitle ?
-                        <div className="divf fdirc fullWH MidCH">
-                            <Header3d />
-                            <CountDown />
-                            <button className="registerH">Register Now!</button>
-                        </div>
+                            {/* {homeB === false && hTitle === false ?
+                        <LoadTheModel />
                         : <></>
-                    }
-                    {/* {hTitle ? <Header3d /> : <></>}
-                    {hTitle ? <button className="registerH">Register Now!</button> : <></>} */}
-                    {hTitle ? <><button className="learnMoreB specB1" onClick={(e) => learnMoreC(e)}>Learn More</button><div id="idExDot" className="expandDotB"></div></> : <></>}
-                </div>
+                    } */}
+                            <BgOptional />
+                            {/* <div > */}
+                            <Suspense fallback={<null />}>
+                                <Canvas id="canvas">
+                                    <ambientLight />
+                                    <OrbitControls
+                                        enableZoom={false}
+                                        enableDamping={false}
+                                        enableRotate={false}
+                                    />
 
+                                    <ModelC />
+
+                                    <Environment preset="sunset" background />
+
+                                </Canvas>
+                            </Suspense>
+                            {/* </div> */}
+
+
+
+                            <div className="divf fdirc fullWH MidCH">
+                                <Header3d />
+                                <CountDown />
+                                <button className="registerH">Register Now!</button>
+                            </div>
+                            <button className="learnMoreB specB1" onClick={(e) => learnMoreC(e)}>Learn More</button>
+                        </div>
+                        <div id="idExDot" className="expandDotB"></div>
+                    </>
+                    : <></>
+                }
             </div >
 
         </>
