@@ -11,15 +11,15 @@ function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <>
-      <BrowserRouter>
-        <Routes>
-          <Route exact path="/" element={<Home />} />
-          <Route path="/info" element={<InfoHome />} />
-          <Route path="/info/about" element={<IAbout />} />
-        </Routes>
-      </BrowserRouter>
-    </>
+    // <>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/info" element={<InfoHome />} />
+        <Route path="/info/about" element={<IAbout />} />
+      </Routes>
+    </BrowserRouter>
+    // </>
   )
 }
 
