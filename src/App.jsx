@@ -14,7 +14,7 @@ function App() {
     // <>
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route exact path="/" element={<Home />} />
         <Route path="/info" element={<InfoHome />} />
         <Route path="/info/about" element={<IAbout />} />
       </Routes>
