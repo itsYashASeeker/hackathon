@@ -98,6 +98,12 @@ export default function InfoHome() {
         }
     }
 
+    function closeMenu() {
+        retId("menuSlide").classList.remove("openSlider");
+        retId("idMenuB").classList.remove("openM");
+        document.body.style.overflow = "auto";
+    }
+
     return (
         <div className="posR">
             <BgOptional />
@@ -110,9 +116,9 @@ export default function InfoHome() {
                         onClick={() => { changeMenuSlide() }}
                         style={{ "display": "none" }}
                     ><FontAwesomeIcon icon={faCircleChevronDown} /></button>
-                    <div className="logoKhaas">
+                    <Link className="logoKhaas" to="/">
                         <img src={hmLogo} className="hmKhaas" />
-                    </div>
+                    </Link>
                 </div>
 
                 <div className="divf" style={{ "gap": "1rem" }}>
@@ -130,12 +136,12 @@ export default function InfoHome() {
                 <button className="registerH navIReg">Register Me!</button>
             </div>
             <div id="menuSlide" className="divf fdirc menSlider allLinks">
-                <button id="navHome" onClick={() => { navigate("/") }}>Home</button>
-                <button id="navAbout" onClick={() => goToSect("about")}>About</button>
-                <button id="navTim" onClick={() => goToSect("timeline")}>Timeline</button>
-                <button id="navSpon" onClick={() => goToSect("sponsors")}>Sponsors</button>
-                <button id="navPart" onClick={() => goToSect("partners")}>Partners</button>
-                <button id="navPriz" onClick={() => goToSect("prizes")}>Prizes</button>
+                <button id="navHome" onClick={() => { closeMenu(); navigate("/") }}>Home</button>
+                <button id="navAbout" onClick={() => { closeMenu(); goToSect("about"); }}>About</button>
+                <button id="navTim" onClick={() => { closeMenu(); goToSect("timeline"); }}>Timeline</button>
+                <button id="navSpon" onClick={() => { closeMenu(); goToSect("sponsors"); }}>Sponsors</button>
+                <button id="navPart" onClick={() => { closeMenu(); goToSect("partners"); }}>Partners</button>
+                <button id="navPriz" onClick={() => { closeMenu(); goToSect("prizes"); }}>Prizes</button>
                 <button id="navFaq">FAQ's</button>
             </div>
             <div className="divf fdirc allSects fullWH">

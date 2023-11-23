@@ -1,3 +1,14 @@
+@media (max-height: 850px) {
+    .hackTitle1 {
+        width: 10rem;
+        height: 10rem;
+    }
+
+    .header3d {
+        font-size: 4rem;
+    }
+}
+
 @media (max-width: 800px) {
     #navAllLinks {
         display: none;
@@ -77,11 +88,21 @@
     .vCL {
         padding: 0.7rem 0.5rem;
         padding-top: 2.5rem;
+        margin-right: 1.5rem;
+        width: 35vw;
+    }
+
+    .diviVL {
+        width: 1.5rem;
+    }
+
+    .vCR {
+        margin-left: 1.5rem;
     }
 
     .timeForE {
         font-size: 0.8rem;
-        left: 0.3rem;
+        left: 0.5rem;
         top: 0.3rem;
     }
 
@@ -93,6 +114,7 @@
         font-size: 1.2rem;
         right: 50%;
         transform: translateX(50%);
+        bottom: 1rem;
     }
 }
 
@@ -111,7 +133,7 @@
 
 @media (max-width: 350px) {
     .header3d {
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
 
     .countCard {
@@ -125,3 +147,10 @@
         font-size: 0.7rem;
     }
 }
+
+/* @media (max-width: 350px) {
+    .header3d {
+        font-size: 2.5rem;
+    }
+
+} */

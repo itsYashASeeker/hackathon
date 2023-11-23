@@ -121,6 +121,23 @@ body {
     transform: translateX(-50%);
     gap: 1.4rem;
     z-index: 5;
+    padding-top: 4rem;
+}
+
+.MidCH .d1 {
+    gap: 2rem;
+}
+
+.MidCH .d2 {
+    gap: 0.5rem;
+}
+
+
+.hackTitle1 {
+    width: 20rem;
+    height: 20rem;
+    border-radius: 50%;
+    box-shadow: 0 0 1rem rgba(219, 219, 219, 0.2);
 }
 
 .blurAn {
@@ -137,32 +154,110 @@ body {
     /* left: 10%;
     top: 10%; */
     background: rgba(0, 185, 169, 1);
-    opacity: 0.4;
-    width: 15rem;
-    height: 15rem;
+    /* opacity: 0.5; */
+
     border-radius: 50%;
-    filter: blur(6rem);
+    filter: blur(4rem);
 }
 
 .blurAn .b1 {
+    background: rgba(0, 230, 211, 0.5);
     top: 1%;
     left: 1%;
-    animation: rotB1 10s infinite linear;
+    width: 12rem;
+    height: 12rem;
+    animation: rotB1 5s infinite linear;
 }
 
 @keyframes rotB1 {
+    0% {
+        transform: translate(-50%, -50%);
+        opacity: 0.4;
+    }
+
+    25% {
+        transform: translate(0%, 30%);
+        opacity: 0.4;
+    }
+
+    50% {
+        transform: translate(100%, 70%);
+        opacity: 0.3;
+    }
+
+    75% {
+        transform: translate(-100%, 200%);
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: translate(-50%, -50%);
+        opacity: 0.4;
+    }
+}
+
+.blurAn .b2 {
+    bottom: 1%;
+    right: 1%;
+    width: 10rem;
+    height: 10rem;
+    animation: rotB2 7s infinite linear;
+    animation-delay: 0.3s;
+    filter: blur(5rem);
+    background: rgba(255, 107, 230, 0.808);
+}
+
+@keyframes rotB2 {
+    0% {
+        transform: translate(10%, 10%);
+        opacity: 0.2;
+    }
+
+    25% {
+        transform: translate(0%, -30%);
+        opacity: 0.3;
+    }
+
+    50% {
+        transform: translate(-100%, -70%);
+        opacity: 0.5;
+    }
+
+    75% {
+        transform: translate(-300%, 0%);
+        opacity: 0.4;
+    }
+
+    100% {
+        transform: translate(10%, 10%);
+        opacity: 0.2;
+    }
+}
+
+.blurAn .b3 {
+    bottom: 50%;
+    right: 50%;
+    width: 10rem;
+    height: 10rem;
+    animation: rotB3 10s infinite linear;
+    animation-delay: 0.2s;
+    filter: blur(5rem);
+    background: rgb(243, 255, 254);
+}
+
+@keyframes rotB3 {
     0% {
         transform: translate(0);
         opacity: 0.2;
     }
 
     25% {
-        transform: translate(50%, 30%);
+        transform: translate(-50%, -30%);
         opacity: 0.3;
     }
 
     50% {
-        transform: translate(20%, 70%);
+        transform: translate(0%, 70%);
         opacity: 0.5;
     }
 
@@ -177,36 +272,40 @@ body {
     }
 }
 
-.blurAn .b2 {
-    bottom: 1%;
-    right: 1%;
-    animation: rotB2 7s infinite linear;
-    animation-delay: 5s;
+.blurAn .b4 {
+    top: -20%;
+    right: -20%;
+    width: 30rem;
+    height: 30rem;
+    animation: rotB4 7s infinite linear;
+    animation-delay: 0s;
+    filter: blur(5rem);
+    background: rgba(0, 230, 211, 0.4);
 }
 
-@keyframes rotB2 {
+@keyframes rotB4 {
     0% {
         transform: translate(0);
         opacity: 0.2;
     }
 
-    25% {
-        transform: translate(-50%, -30%);
-        opacity: 0.3;
-    }
-
     50% {
-        transform: translate(-20%, -70%);
-        opacity: 0.5;
+        /* transform: translate(-100%, -100%); */
+        top: 100%;
+        right: 100%;
+        opacity: 0.2;
     }
 
     75% {
-        transform: translate(-100%, -90%);
-        opacity: 0.4;
+        transform: translate(0);
+        top: -50%;
+        right: 50%;
+        opacity: 0.2;
     }
 
     100% {
-        transform: translate(0);
+        top: -20%;
+        right: -20%;
         opacity: 0.2;
     }
 }
@@ -216,6 +315,7 @@ body {
     top: 0;
     left: 0;
     height: calc(100vh);
+    height: 100%;
     width: 100%;
     z-index: 100;
     /* transition: 2s all ease-out; */
@@ -266,10 +366,10 @@ body {
     /* transform: translate(-50%, -50%); */
     color: white;
     background: rgba(255, 255, 255, 0.05);
-    background: linear-gradient(rgba(128, 0, 128, 0.2), rgba(0, 0, 255, 0.1), rgba(0, 236, 0, 0.1), rgba(0, 41, 226, 0.1));
+    background: linear-gradient(rgba(128, 0, 128, 0.2), rgba(0, 0, 255, 0.1), rgba(0, 236, 216, 0.1), rgba(0, 41, 226, 0.1));
     backdrop-filter: blur(0.2rem);
     padding: 0.3rem 1.5rem;
-
+    padding-bottom: 0;
     font-size: 6rem;
     font-weight: bold;
     border-radius: 0.8rem;
@@ -343,14 +443,14 @@ body {
     top: 60%;
     left: 50%;
     transform: translate(-50%, -50%); */
-    padding: 0.3rem 1rem;
+    padding: 0.3rem 0.9rem;
 
     border: 0.2rem solid white;
     border-radius: 1rem;
     background: #2368fb;
     color: white;
     outline: 0;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     cursor: pointer;
     transition: 0.2s all ease-out;
 }
@@ -374,7 +474,7 @@ body {
 
     background: black;
     border-radius: 50%;
-    animation: expandD 0.5s normal linear;
+    animation: expandD 0.8s normal linear;
     z-index: 20000;
     box-shadow: 0 0 0.1rem 60vw rgb(0, 0, 0);
 }
@@ -387,7 +487,7 @@ body {
 
     100% {
         /* border-radius: 100%; */
-        box-shadow: 0 0 0.1rem 60vw rgb(0, 0, 0);
+        box-shadow: 0 0 0.1rem calc(100vw + 100vh) rgb(0, 0, 0);
     }
 }
 

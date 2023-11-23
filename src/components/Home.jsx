@@ -1,4 +1,4 @@
-import "../css/index.css";
+
 import Navbar from "./Navbar";
 import "../css/index2.sass";
 import Hacker1 from "../assets/hacker1.svg"
@@ -13,8 +13,10 @@ import IETLogo from "../assets/IET_LOGO.png";
 import postmanLogo from "../assets/postman_logo.png";
 import { useNavigate } from "react-router-dom";
 import CountDown from "./CountDown";
-import { motion } from "framer-motion"
+import { motion } from "framer-motion";
+import HackmelaI from "../assets/hackmela_title.png";
 
+import "../css/index.css";
 
 // Extend will make OrbitControls available as a JSX element called orbitControls for us to use.
 extend({ OrbitControls });
@@ -88,6 +90,8 @@ export function BgOptional() {
             <div className="blurAn">
                 <div className="b1"></div>
                 <div className="b2"></div>
+                <div className="b3"></div>
+                <div className="b4"></div>
             </div>
             <div class="lines">
                 <div class="line"></div>
@@ -183,10 +187,16 @@ export default function Home() {
 
 
 
-                            <div className="divf fdirc fullWH MidCH">
-                                <Header3d />
-                                <CountDown />
-                                <button className="registerH">Register Now!</button>
+                            <div className="divf fdirc fullWH MidCH jusSpaceB">
+                                <div className="divf fdirc fullWH d1">
+                                    <img src={HackmelaI} className="hackTitle1" />
+                                    <Header3d />
+                                </div>
+                                <div className="divf fdirc fullWH d2">
+                                    <CountDown />
+                                    <button className="registerH">Register Now!</button>
+                                </div>
+
                             </div>
                             <button className="learnMoreB specB1" onClick={(e) => learnMoreC(e)}>Learn More</button>
                         </div>
