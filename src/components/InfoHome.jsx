@@ -19,7 +19,12 @@ import { faCalendarDays } from "@fortawesome/free-regular-svg-icons";
 import { faCircleChevronDown, faIndianRupeeSign, faPeopleGroup } from "@fortawesome/free-solid-svg-icons";
 import HTimeline from "./HTimeline";
 import hmLogo from "../assets/hm.png";
-import "../css/media.css"
+import "../css/media.css";
+
+import themeWeb3 from "../assets/themes/web3.png";
+import themeaiml from "../assets/themes/aiml.png";
+import themearvr from "../assets/themes/arvr.png";
+import themeWApp from "../assets/themes/wapp.png";
 
 import firstI from "../assets/first.png";
 import secondI from "../assets/second.png";
@@ -36,30 +41,36 @@ export default function InfoHome() {
     useEffect(() => {
         function updateSect() {
             const scrolledTop = Math.abs(window.scrollY);
+            const themes = retId("themes").offsetTop;
             const timeline = retId("timeline").offsetTop;
             const sponsors = retId("sponsors").offsetTop;
-            const partners = retId("partners").offsetTop;
+            // const partners = retId("partners").offsetTop;
             const prizes = retId("prizes").offsetTop;
             retId("navAbout").classList.remove("aRN");
+            retId("navTheme").classList.remove("aRN");
             retId("navTim").classList.remove("aRN");
             retId("navSpon").classList.remove("aRN");
-            retId("navPart").classList.remove("aRN");
+            // retId("navPart").classList.remove("aRN");
             retId("navPriz").classList.remove("aRN");
-            if (scrolledTop < (timeline - 50)) {
+            if (scrolledTop < (themes - 50)) {
                 // navigate("/info/#about");
                 retId("navAbout").classList.add("aRN");
+            }
+            else if (scrolledTop < (timeline - 50)) {
+                // navigate("/info/#about");
+                retId("navTheme").classList.add("aRN");
             }
             else if (scrolledTop < (sponsors - 50)) {
                 // navigate("/info/#sponsors");
                 retId("navTim").classList.add("aRN");
             }
-            else if (scrolledTop < (partners - 50)) {
-                // navigate("/info/#sponsors");
-                retId("navSpon").classList.add("aRN");
-            }
+            // else if (scrolledTop < (partners - 50)) {
+            //     // navigate("/info/#sponsors");
+            //     retId("navSpon").classList.add("aRN");
+            // }
             else if (scrolledTop < (prizes - 50)) {
                 // navigate("/info/#sponsors");
-                retId("navPart").classList.add("aRN");
+                retId("navSpon").classList.add("aRN");
             }
             else {
                 // navigate("/info/#prizes");
@@ -124,25 +135,30 @@ export default function InfoHome() {
                 <div className="divf" style={{ "gap": "1rem" }}>
 
                     <div id="navAllLinks" className="divf allLinks fullWH">
-                        <button id="navHome" onClick={() => { navigate("/") }}>Home</button>
-                        <button id="navAbout" onClick={() => goToSect("about")}>About</button>
+                        {/* <button id="navHome" onClick={() => { navigate("/") }}>Home</button> */}
+                        <button id="navAbout" onClick={() => goToSect("about")}>About Hackmela</button>
+                        <button id="navTheme" onClick={() => goToSect("themes")}>Themes</button>
                         <button id="navTim" onClick={() => goToSect("timeline")}>Timeline</button>
                         <button id="navSpon" onClick={() => goToSect("sponsors")}>Sponsors</button>
-                        <button id="navPart" onClick={() => goToSect("partners")}>Partners</button>
+                        {/* <button id="navPart" onClick={() => goToSect("partners")}>Partners</button> */}
                         <button id="navPriz" onClick={() => goToSect("prizes")}>Prizes</button>
+                        {/* <button id="navMAb" onClick={() => navigate("/info/about")}>About</button> */}
                         <button id="navFaq">FAQ's</button>
+                        <button id="navMAb" onClick={() => navigate("/info/about")}>About Us</button>
                     </div>
                 </div>
                 <button className="registerH navIReg">Register Me!</button>
             </div>
             <div id="menuSlide" className="divf fdirc menSlider allLinks">
-                <button id="navHome" onClick={() => { closeMenu(); navigate("/") }}>Home</button>
-                <button id="navAbout" onClick={() => { closeMenu(); goToSect("about"); }}>About</button>
+                {/* <button id="navHome" onClick={() => { closeMenu(); navigate("/") }}>Home</button> */}
+                <button id="navAbout" onClick={() => goToSect("about")}>About Hackmela</button>
+                <button id="navTheme" onClick={() => goToSect("themes")}>Themes</button>
                 <button id="navTim" onClick={() => { closeMenu(); goToSect("timeline"); }}>Timeline</button>
                 <button id="navSpon" onClick={() => { closeMenu(); goToSect("sponsors"); }}>Sponsors</button>
-                <button id="navPart" onClick={() => { closeMenu(); goToSect("partners"); }}>Partners</button>
+                {/* <button id="navPart" onClick={() => { closeMenu(); goToSect("partners"); }}>Partners</button> */}
                 <button id="navPriz" onClick={() => { closeMenu(); goToSect("prizes"); }}>Prizes</button>
                 <button id="navFaq">FAQ's</button>
+                <button id="navMAb" onClick={() => navigate("/info/about")}>About Us</button>
             </div>
             <div className="divf fdirc allSects fullWH">
                 <section id="about" className="divf about fullWH sectC">
@@ -155,13 +171,16 @@ export default function InfoHome() {
                         {/* <div className="designSectC1"></div> */}
                         <div className="divf fdirc alignL fullWH sectCard1">
 
-                            <p className="mainH alignL ">{"<About />"}</p>
+                            <p className="mainH alignL ">{"<Hackmela />"}</p>
 
                             <div className="divf firc alignL fullWH" style={{ "gap": "3rem" }}>
                                 <div className="divf fdirc fullWH aboutHM">
                                     {/* <div className="divf fullWH aboutCoM"> */}
                                     {/* <div className="divf" style={{"width": "50%"}}> */}
-                                    <img src={HackmelaI} className="hackTitle" />
+                                    <Link to="/">
+                                        <img src={HackmelaI} className="hackTitle" />
+                                    </Link>
+
                                     {/* </div> */}
 
                                     <p className="abhmdesc">The hackathon will be a <b>24-hour offline intensive competition</b> where teams of developers, designers, and innovators will come together to create solutions in the <b>domains of Blockchain, Artificial Intelligence, Machine Learning, AR/VR</b>. Shortlisting of teams will be done after the registration process and <b>15-20 teams</b> will shortlisted based on their profiles and problem statements. Innovative, creative and societal based problem statements will be focused in our Hackathon. Our hackathon will be an <b>Aurora for enthusiastic developers to build creative projects and get opportunities.</b></p>
@@ -173,7 +192,7 @@ export default function InfoHome() {
                                                 <p>Dates</p>
                                             </div>
                                             <div className="indCMain">
-                                                <p>2 & 3 Mar, 2023</p>
+                                                <p>2 & 3 Mar, 2024</p>
                                             </div>
                                         </div>
                                         <div className="divf fdirc indCard">
@@ -205,6 +224,26 @@ export default function InfoHome() {
                                         </div> */}
                                     </div>
                                 </div>
+                            </div>
+                        </div>
+                    </motion.div>
+                </section>
+                <section id="themes" className="divf about fullWH sectC">
+                    <motion.div
+                        initial={{ opacity: 0.5, y: 100 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 1, type: "spring" }}
+                        className="posR fullWH">
+                        {/* <div className="designSectC1"></div> */}
+                        <div className="divf fdirc alignL fullWH sectCard1">
+
+                            <p className="mainH alignL ">{"<Themes />"}</p>
+                            <div className="divf allThemes fullWH">
+                                <img src={themeWeb3} />
+                                <img src={themeaiml} />
+                                <img src={themeWApp} />
+                                <img src={themearvr} />
                             </div>
                         </div>
                     </motion.div>
@@ -281,7 +320,7 @@ export default function InfoHome() {
                                 </div>
                             </div>
 
-                        </div>
+                            {/* </div>
                     </motion.div>
                 </section>
                 <section id="partners" className="divf about fullWH sectC sponsorS">
@@ -291,8 +330,7 @@ export default function InfoHome() {
                         viewport={{ once: true }}
                         transition={{ duration: 1, type: "spring" }}
                     >
-                        {/* <div className="designSectC1"></div> */}
-                        <div className="divf fdirc alignL fullWH sectCard1 sponDiv">
+                        <div className="divf fdirc alignL fullWH sectCard1 sponDiv"> */}
                             <p className="mainH  ">{"<Community Partners />"}</p>
                             <div className="divf allSpons">
                                 <Link><img src={PolygonL} className="sponC"></img></Link>

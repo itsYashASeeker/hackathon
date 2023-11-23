@@ -1,5 +1,6 @@
 import "../css/index.css";
 import "../css/navbar.css";
+import kjsitLogo from "../assets/kjsit.jpg";
 import IETLogo from "../assets/IET_LOGO.png";
 import postmanLogo from "../assets/postman_logo.png";
 import hmLogo from "../assets/hm.png";
@@ -14,11 +15,13 @@ export default function Navbar() {
                 </Link>
                 {/* <div className="" */}
                 <div className="divf logoCon">
+                    <img src={kjsitLogo} className="logo1" />
+                    <p className="xForLogo">|</p>
                     <img src={IETLogo} className="logo1" />
                     <p className="xForLogo">X</p>
                     <img src={postmanLogo} className="logo1" />
                 </div>
-                
+
                 {/* <div className="lights"></div> */}
             </div>
         </>

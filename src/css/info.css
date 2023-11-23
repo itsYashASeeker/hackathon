@@ -417,3 +417,20 @@ body {}
     height: 100%;
     background: var(--bgForMed);
 }
+
+.kLogo {
+    height: 5rem;
+    width: 100%;
+}
+
+.allThemes {
+    flex-wrap: wrap;
+    padding: 1rem 0;
+    gap: 1rem;
+
+}
+
+.allThemes img {
+    width: 15rem;
+    height: 100%;
+}
