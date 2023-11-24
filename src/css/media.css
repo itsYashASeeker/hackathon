@@ -151,8 +151,12 @@
 }
 
 @media (max-width: 450px) {
-    .header3d {
-        font-size: 3rem;
+    .inHack {
+        height: 2.5rem;
+    }
+
+    .inMela {
+        font-size: 2.5rem;
     }
 
     .countCard {
@@ -167,10 +171,18 @@
     }
 }
 
-@media (max-width: 350px) {
-    .header3d {
-        font-size: 2.5rem;
+@media (max-width: 400px) {
+    .inHack {
+        height: 2rem;
     }
+
+    .inMela {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 350px) {
+
 
     .countCard {
         font-size: 0.6rem;

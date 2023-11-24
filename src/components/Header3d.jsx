@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react"
+import { useEffect, useState } from "react";
+import hackL from "../assets/hack.png";
 
 
 export default function Header3d() {
@@ -36,12 +37,15 @@ export default function Header3d() {
 
     return (
         <>
-            <div id="idheader3rd" className="header3d" style={{
+            <div id="idheader3rd" className="header3d divf" style={{
                 transform: ` perspective(700px)
                   rotateY(${headS.offSetX}deg)
                   rotateX(${headS.offSetY}deg)`
             }}
-            ><span className="inHack">Hack</span><span className="inMela">मेला</span></div>
+            >
+                {/* <span className="inHack">Hack</span> */}
+                <img src={hackL} className="inHack" />
+                <span className="inMela">मेला</span></div>
         </>
     )
 }
