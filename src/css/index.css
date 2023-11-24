@@ -375,7 +375,7 @@ body {
     /* transform: translate(-50%, -50%); */
     color: white;
     background: rgba(255, 255, 255, 0.05);
-    background: linear-gradient(rgba(128, 0, 128, 0.2), rgba(0, 0, 255, 0.1), rgba(0, 236, 216, 0.1), rgba(0, 41, 226, 0.1));
+    background: linear-gradient(rgba(128, 0, 128, 0.2), rgba(0, 195, 255, 0.2), rgba(33, 255, 236, 0.2), rgba(255, 255, 255, 0.2));
     backdrop-filter: blur(0.2rem);
     padding: 0.3rem 1.5rem;
     padding-bottom: 0;
@@ -391,13 +391,14 @@ body {
 
 .inHack {
     font-family: "Press Start 2P", "serif";
-    text-shadow: 0.5rem 0.2rem 1rem rgb(234, 0, 255);
+    color: #7cfaff !important;
+    text-shadow: 0.15rem 0.15rem 0.15rem rgb(234, 0, 255);
     /* line-height: 4rem; */
 }
 
 .inMela {
     font-family: "Press Start 2P", "serif";
-    text-shadow: 0.5rem 0.2rem 1rem rgb(17, 0, 255);
+    text-shadow: 0.15rem 0.15rem 0.15rem #7cfaff;
 }
 
 @keyframes animHeader3d {
