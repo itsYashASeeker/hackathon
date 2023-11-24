@@ -183,7 +183,7 @@ export default function InfoHome() {
 
                                     {/* </div> */}
 
-                                    <p className="abhmdesc">The hackathon will be a <b>24-hour offline intensive competition</b> where teams of developers, designers, and innovators will come together to create solutions in the <b>domains of Blockchain, Artificial Intelligence, Machine Learning, AR/VR</b>. Shortlisting of teams will be done after the registration process and <b>15-20 teams</b> will shortlisted based on their profiles and problem statements. Innovative, creative and societal based problem statements will be focused in our Hackathon. Our hackathon will be an <b>Aurora for enthusiastic developers to build creative projects and get opportunities.</b></p>
+                                    <p className="abhmdesc">The hackathon will be a <b>24-hour offline intensive competition</b> where teams of developers, designers, and innovators will come together to create solutions in the <b>domains of Blockchain, Artificial Intelligence, Machine Learning, AR/VR</b>. Shortlisting of teams will be done after the registration process and <b>20 teams</b> will shortlisted based on their profiles and problem statements. Innovative, creative and societal based problem statements will be focused in our Hackathon. Our hackathon will be an <b>Aurora for enthusiastic developers to build creative projects and get opportunities.</b></p>
                                     {/* </div> */}
                                     <div className="divf allCAbH">
                                         <div className="divf fdirc indCard">
@@ -198,12 +198,22 @@ export default function InfoHome() {
                                         <div className="divf fdirc indCard">
                                             <div className="divf indCHead">
                                                 <FontAwesomeIcon icon={faPeopleGroup} />
+                                                <p>Shortlist</p>
+                                            </div>
+                                            <div className="indCMain">
+                                                <p>20 Teams</p>
+                                            </div>
+                                        </div>
+                                        <div className="divf fdirc indCard">
+                                            <div className="divf indCHead">
+                                                <FontAwesomeIcon icon={faPeopleGroup} />
                                                 <p>Team</p>
                                             </div>
                                             <div className="indCMain">
                                                 <p>2-4 Members</p>
                                             </div>
                                         </div>
+
                                         <div className="divf fdirc indCard">
                                             <div className="divf indCHead">
                                                 <FontAwesomeIcon icon={faCalendarDays} />
@@ -280,10 +290,11 @@ export default function InfoHome() {
                                         <p>D</p>
                                     </p>
                                     <div className="divf allSpons">
-                                        <Link><img src={PolygonL} className="sponC"></img></Link>
+                                        <p className="willBeAnnounc">Will be announced soon..</p>
+                                        {/* <Link><img src={PolygonL} className="sponC"></img></Link>
                                         <Link><img src={GraphL} className="sponC"></img></Link>
                                         <Link><img src={GoogleL} className="sponC"></img></Link>
-                                        <Link><img src={EthereumL} className="sponC"></img></Link>
+                                        <Link><img src={EthereumL} className="sponC"></img></Link> */}
                                     </div>
                                 </div>
                                 <div className="divf typeSpon silver">
@@ -296,7 +307,8 @@ export default function InfoHome() {
                                         <p>R</p>
                                     </p>
                                     <div className="divf allSpons">
-                                        <Link><img src={PolygonL} className="sponC"></img></Link>
+                                        <p className="willBeAnnounc">Will be announced soon..</p>
+                                        {/* <Link><img src={PolygonL} className="sponC"></img></Link> */}
                                         {/* <Link><img src={GraphL} className="sponC"></img></Link>
                                         <Link><img src={GoogleL} className="sponC"></img></Link>
                                         <Link><img src={EthereumL} className="sponC"></img></Link> */}
@@ -312,14 +324,15 @@ export default function InfoHome() {
                                         <p>E</p>
                                     </p>
                                     <div className="divf allSpons">
-                                        <Link><img src={PolygonL} className="sponC"></img></Link>
+                                        <p className="willBeAnnounc">Will be announced soon..</p>
+                                        {/* <Link><img src={PolygonL} className="sponC"></img></Link>
                                         <Link><img src={GraphL} className="sponC"></img></Link>
                                         <Link><img src={GoogleL} className="sponC"></img></Link>
-                                        <Link><img src={EthereumL} className="sponC"></img></Link>
+                                        <Link><img src={EthereumL} className="sponC"></img></Link> */}
                                     </div>
                                 </div>
                             </div>
-
+                            <div className="dividerSp"></div>
                             {/* </div>
                     </motion.div>
                 </section>
@@ -333,13 +346,14 @@ export default function InfoHome() {
                         <div className="divf fdirc alignL fullWH sectCard1 sponDiv"> */}
                             <p className="mainH  ">{"<Community Partners />"}</p>
                             <div className="divf allSpons">
-                                <Link><img src={PolygonL} className="sponC"></img></Link>
+                                <p className="willBeAnnounc">Will be announced soon..</p>
+                                {/* <Link><img src={PolygonL} className="sponC"></img></Link>
                                 <Link><img src={GraphL} className="sponC"></img></Link>
                                 <Link><img src={GoogleL} className="sponC"></img></Link>
                                 <Link><img src={EthereumL} className="sponC"></img></Link>
                                 <Link><img src={ArbitrumL} className="sponC"></img></Link>
                                 <Link><img src={MetaL} className="sponC"></img></Link>
-                                <Link><img src={ReplitL} className="sponC"></img></Link>
+                                <Link><img src={ReplitL} className="sponC"></img></Link> */}
                             </div>
                         </div>
                     </motion.div>
@@ -358,7 +372,7 @@ export default function InfoHome() {
                                 <div className="Prize silver prSil">
                                     <div className="divf fdirc">
                                         <p className="pH1 silver">2nd Prize</p>
-                                        <p className="pH2"><FontAwesomeIcon icon={faIndianRupeeSign} className="rupeeS" />50,000</p>
+                                        <p className="pH2"><FontAwesomeIcon icon={faIndianRupeeSign} className="rupeeS" />25,000</p>
                                     </div>
                                     <div className="divf tCont">
                                         <img src={secondI}
@@ -369,7 +383,7 @@ export default function InfoHome() {
                                 <div className="Prize gold prGol">
                                     <div className="divf fdirc">
                                         <p className="pH1 gold">1st Prize</p>
-                                        <p className="pH2"><FontAwesomeIcon icon={faIndianRupeeSign} className="rupeeS" />50,000</p>
+                                        <p className="pH2"><FontAwesomeIcon icon={faIndianRupeeSign} className="rupeeS" />35,000</p>
                                     </div>
                                     <div className="divf tCont">
                                         <img src={firstI}
@@ -380,7 +394,7 @@ export default function InfoHome() {
                                 <div className="Prize bronze prBro">
                                     <div className="divf fdirc">
                                         <p className="pH1 bronze">3rd Prize</p>
-                                        <p className="pH2"><FontAwesomeIcon icon={faIndianRupeeSign} className="rupeeS" />50,000</p>
+                                        <p className="pH2"><FontAwesomeIcon icon={faIndianRupeeSign} className="rupeeS" />15,000</p>
                                     </div>
                                     <div className="divf tCont">
                                         <img src={thirdI}

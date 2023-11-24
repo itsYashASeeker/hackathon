@@ -147,6 +147,7 @@ body {}
 .allTypeS {
     margin: 1rem;
     gap: 1.5rem;
+    width: 100%;
 }
 
 
@@ -160,6 +161,7 @@ body {}
     padding-left: 2rem;
     overflow: hidden;
     border-radius: 1rem;
+    box-shadow: 0 0 0.3rem var(--typeC);
     /* max-width: 50rem; */
     width: 90%;
     /* margin: 1rem; */
@@ -200,6 +202,16 @@ body {}
     --typeC: #CD7F32;
 }
 
+.allTypeS .gold {
+    min-height: 10rem;
+}
+
+.allTypeS .silver,
+.allTypeS .bronze {
+    min-height: 12rem;
+}
+
+
 
 .allSpons {
     flex-wrap: wrap;
@@ -226,6 +238,21 @@ body {}
 .aboutHM {
     padding: 2rem;
     gap: 1.3rem;
+}
+
+.willBeAnnounc {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+    background: rgb(0, 0, 0);
+    padding: 0.3rem;
+    border: 0.1rem dashed red;
+}
+
+.dividerSp {
+    border-bottom: 0.2rem dashed white;
+    width: 10rem;
+    margin-bottom: 1rem;
 }
 
 /* .aboutCoM{
