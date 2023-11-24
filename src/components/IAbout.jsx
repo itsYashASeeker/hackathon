@@ -39,6 +39,31 @@ export default function IAbout() {
         "postman": "The Postman KJSIT Community is a valuable resource for anyone who wants to learn more about Postman and how to use it to build and test APIs. Postman is a collaborative API development environment that helps teams build, test, document, and monitor APIs."
     }
 
+    function changeMenuSlide() {
+        const menuCL = retId("menuSlide").classList;
+        // console.log(menuCL);
+        if (menuCL.contains("openSlider")) {
+            retId("menuSlide").classList.remove("openSlider");
+            retId("idMenuBIA").classList.remove("openM");
+            document.body.style.overflow = "auto";
+        }
+        else {
+            retId("menuSlide").classList.add("openSlider");
+            document.body.style.overflow = "hidden";
+            retId("idMenuBIA").classList.add("openM");
+        }
+    }
+
+    function closeMenu() {
+        retId("menuSlide").classList.remove("openSlider");
+        retId("idMenuBIA").classList.remove("openM");
+        document.body.style.overflow = "auto";
+    }
+
+    function retId(idname) {
+        return document.getElementById(idname)
+    }
+
     return (
         <>
             <div className="posR">
@@ -47,7 +72,7 @@ export default function IAbout() {
 
                     <div className="divf" >
                         <button
-                            id="idMenuB"
+                            id="idMenuBIA"
                             className="menuNB"
                             onClick={() => { changeMenuSlide() }}
                             style={{ "display": "none" }}
@@ -58,29 +83,17 @@ export default function IAbout() {
                     </div>
 
                     <div className="divf" style={{ "gap": "1rem" }}>
-
-                        <div id="navAllLinks" className="divf allLinks fullWH">
+                        <div id="navAllLinksIA" className="divf allLinks fullWH">
                             <button id="navAbout" onClick={() => navigate("/")}>Home</button>
                             <button id="navAbout" onClick={() => navigate("/info")}>Hackmela Info</button>
-                            {/* <button id="navTim" onClick={() => goToSect("timeline")}>Timeline</button>
-                            <button id="navSpon" onClick={() => goToSect("sponsors")}>Sponsors</button>
-                            <button id="navPart" onClick={() => goToSect("partners")}>Partners</button>
-                            <button id="navPriz" onClick={() => goToSect("prizes")}>Prizes</button>
-                            <button id="navFaq">FAQ's</button>
-                            <button id="navMAb" onClick={() => navigate("/info/about")}>About</button> */}
                         </div>
                     </div>
                     <button className="registerH navIReg">Register Me!</button>
                 </div>
-                {/* <div id="menuSlide" className="divf fdirc menSlider allLinks">
-                    <button id="navAbout" onClick={() => { closeMenu(); goToSect("about"); }}>Hackmela</button>
-                    <button id="navTim" onClick={() => { closeMenu(); goToSect("timeline"); }}>Timeline</button>
-                    <button id="navSpon" onClick={() => { closeMenu(); goToSect("sponsors"); }}>Sponsors</button>
-                    <button id="navPart" onClick={() => { closeMenu(); goToSect("partners"); }}>Partners</button>
-                    <button id="navPriz" onClick={() => { closeMenu(); goToSect("prizes"); }}>Prizes</button>
-                    <button id="navFaq">FAQ's</button>
-                    <button id="navMAb" onClick={() => navigate("/info/about")}>About</button>
-                </div> */}
+                <div id="menuSlide" className="divf fdirc menSlider allLinks">
+                    <button id="navAbout" onClick={() => { closeMenu(); navigate("/") }}>Home</button>
+                    <button id="navAbout" onClick={() => { closeMenu(); navigate("/info") }}>Hackmela Info</button>
+                </div>
                 <div className="divf fdirc allSects fullWH">
                     <section id="kjsit" className="divf about fullWH sectC">
                         <motion.div

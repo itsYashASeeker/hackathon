@@ -107,7 +107,7 @@
     }
 
     .registerH {
-        font-size: 1.5rem;
+        font-size: 1rem;
     }
 
     .learnMoreB {
@@ -140,6 +140,14 @@
     .aboutHM {
         padding: 1rem;
     }
+
+    #idMenuBIA {
+        display: block !important;
+    }
+
+    #navAllLinksIA {
+        display: none;
+    }
 }
 
 @media (max-width: 450px) {
@@ -152,6 +160,10 @@
         padding: 0.3rem;
         width: 4rem;
         height: 4rem;
+    }
+
+    .kLogo {
+        height: 3rem;
     }
 }
 

@@ -13,7 +13,7 @@ export default function CountDown() {
     useEffect(() => {
         setTimeout(() => {
             const time = Date.parse(deadline) - Date.parse(new Date());
-            console.log(time);
+            // console.log(time);
             if (time < 0) {
                 setTimeL({ ...timeL, days: 0, hours: 0, minutes: 0, seconds: 0 });
             } else {
@@ -31,7 +31,7 @@ export default function CountDown() {
     }
 
     useEffect(() => {
-        console.log(timeL);
+        // console.log(timeL);
     }, [timeL])
 
     return (
