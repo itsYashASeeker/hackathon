@@ -125,17 +125,20 @@ body {
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    gap: 1.4rem;
+    gap: 2rem;
     z-index: 5;
+    padding: 2rem;
     padding-top: 4rem;
 }
 
 .MidCH .d1 {
-    gap: 2rem;
+    gap: 1.5rem;
+    width: 100%;
 }
 
 .MidCH .d2 {
     gap: 0.5rem;
+    width: 100%;
 }
 
 
@@ -381,7 +384,7 @@ body {
     border-radius: 0.8rem;
     animation: animHeader3d 0.4s linear;
 
-    margin-bottom: 2rem;
+    /* margin-bottom: 2rem; */
     /* transition: 0.8s all cubic-bezier(0.1, 0.2, 0.3, 1); */
     /* transition-delay: 0.1s; */
 }
@@ -442,6 +445,10 @@ body {
 
 .countTit {
     font-size: 0.9rem;
+}
+
+.regEnds {
+    color: white;
 }
 
 .registerH {

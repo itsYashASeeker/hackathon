@@ -8,7 +8,7 @@ export default function CountDown() {
         seconds: 0
     })
 
-    const deadline = "February 7, 2024";
+    const deadline = "February 24, 2024";
 
     useEffect(() => {
         setTimeout(() => {
@@ -36,6 +36,7 @@ export default function CountDown() {
 
     return (
         <>
+            <p className="regEnds">Registration Ends in</p>
             <div className="divf countD">
                 <div className="countCard divf fdirc">
                     <p>{leading0(timeL.days)}</p>

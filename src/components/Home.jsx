@@ -187,12 +187,12 @@ export default function Home() {
 
 
 
-                            <div className="divf fdirc fullWH MidCH jusSpaceB">
-                                <div className="divf fdirc fullWH d1">
+                            <div className="divf fdirc fullWH MidCH ">
+                                <div className="divf fdirc d1">
                                     <img src={HackmelaI} className="hackTitle1" />
                                     <Header3d />
                                 </div>
-                                <div className="divf fdirc fullWH d2">
+                                <div className="divf fdirc d2">
                                     <CountDown />
                                     <button className="registerH">Register Now!</button>
                                 </div>

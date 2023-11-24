@@ -15,11 +15,11 @@ export default function Navbar() {
                 </Link>
                 {/* <div className="" */}
                 <div className="divf logoCon">
-                    <img src={kjsitLogo} className="logo1" />
+                    <Link className="divf" to="https://kjsit.somaiya.edu.in/" target="_blank"><img src={kjsitLogo} className="logo1" /></Link>
                     <p className="xForLogo">|</p>
-                    <img src={IETLogo} className="logo1" />
+                    <Link className="divf" to='https://iet.org/' target="_blank"><img src={IETLogo} className="logo1" /></Link>
                     <p className="xForLogo">X</p>
-                    <img src={postmanLogo} className="logo1" />
+                    <Link className="divf" to="https://academy.postman.com/page/students" target="_blank"><img src={postmanLogo} className="logo1" /></Link>
                 </div>
 
                 {/* <div className="lights"></div> */}

@@ -106,7 +106,7 @@ export default function IAbout() {
                                 <p className="mainH alignL ">{"<KJSIT />"}</p>
                                 <div className="divf firc alignL fullWH" style={{ "gap": "3rem" }}>
                                     <div className="divf fdirc fullWH aboutHM">
-                                        <Link to="/">
+                                        <Link to="https://kjsit.somaiya.edu.in/" target="_blank">
                                             <img src={kjsitLogo} className="kLogo" />
                                         </Link>
                                         <p className="abhmdesc">{aboutUs.kjsit}</p>
@@ -126,7 +126,7 @@ export default function IAbout() {
                                 <p className="mainH alignL ">{"<IET />"}</p>
                                 <div className="divf firc alignL fullWH" style={{ "gap": "3rem" }}>
                                     <div className="divf fdirc fullWH aboutHM">
-                                        <Link to="/">
+                                        <Link to="https://iet.org/" target="_blank">
                                             <img src={IETLogo} className="kLogo" />
                                         </Link>
                                         <p className="abhmdesc">{aboutUs.iet}</p>
@@ -146,7 +146,7 @@ export default function IAbout() {
                                 <p className="mainH alignL ">{"<Postman />"}</p>
                                 <div className="divf firc alignL fullWH" style={{ "gap": "3rem" }}>
                                     <div className="divf fdirc fullWH aboutHM">
-                                        <Link to="/">
+                                        <Link to="https://academy.postman.com/page/students" target="_blank">
                                             <img src={postmanLogo} className="kLogo" />
                                         </Link>
                                         <p className="abhmdesc">{aboutUs.postman}</p>
