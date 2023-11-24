@@ -116,6 +116,30 @@
         transform: translateX(50%);
         bottom: 1rem;
     }
+
+    .loadBeB logo1 {
+        height: 2.5rem;
+    }
+
+    .loadBeB .pres {
+        font-size: 1.5rem;
+    }
+
+    .loadBeDI img {
+        height: 2.5rem;
+    }
+
+    .loadBeB p {
+        font-size: 0.8rem;
+    }
+
+    .logo1 {
+        height: 2rem;
+    }
+
+    .aboutHM {
+        padding: 1rem;
+    }
 }
 
 @media (max-width: 450px) {
@@ -145,6 +169,14 @@
 
     .countTit {
         font-size: 0.7rem;
+    }
+
+    .logo1 {
+        height: 1.5rem;
+    }
+
+    .aboutHM {
+        padding: 0.5rem;
     }
 }
 

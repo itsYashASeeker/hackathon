@@ -31,6 +31,14 @@ import FAQs from "./faq";
 
 export default function IAbout() {
     const navigate = useNavigate();
+
+
+    const aboutUs = {
+        "kjsit": "K J Somaiya Institute of Technology, Sion ,Mumbai was established in the year 2001. It is an autonomous engineering institute recognized by UGC, approved by AICTE & DTE, and is permanently affiliated to the University of Mumbai.KJSIT offers UG programs in Computer Engineering, Information Technology, Artificial Intelligence & Data Science, Electronics & Telecommunication Engineering, PG program in Artificial Intelligence and Ph.D.programs in Computer Engineering,Electronics & Telecommunication Engineering and Information Technology.Our aim is to impart the need-based and value - based quality technical education to students, making them the best technocrats.We conduct various technical, cultural and sports activities all through the year by providing the exposure making students all-rounders.",
+        "iet": "The Institution of Engineering and Technology is one of the worlds professional societies of engineering and technology community with more than 150,000 members in 127 countries and offices in the Europe, North America and Asia- Pacific regions.The IET provides a global knowledge network to facilitate the exchange of ideas and promote the positive role of science, engineering and technology in the world.K J Somaiya Institue of Technology is one of the best academic affiliate partner and thank you support institute with the IET.",
+        "postman": "The Postman KJSIT Community is a valuable resource for anyone who wants to learn more about Postman and how to use it to build and test APIs. Postman is a collaborative API development environment that helps teams build, test, document, and monitor APIs."
+    }
+
     return (
         <>
             <div className="posR">
@@ -88,7 +96,7 @@ export default function IAbout() {
                                         <Link to="/">
                                             <img src={kjsitLogo} className="kLogo" />
                                         </Link>
-                                        <p className="abhmdesc">The hackathon will be a <b>24-hour offline intensive competition</b> where teams of developers, designers, and innovators will come together to create solutions in the <b>domains of Blockchain, Artificial Intelligence, Machine Learning, AR/VR</b>. Shortlisting of teams will be done after the registration process and <b>15-20 teams</b> will shortlisted based on their profiles and problem statements. Innovative, creative and societal based problem statements will be focused in our Hackathon. Our hackathon will be an <b>Aurora for enthusiastic developers to build creative projects and get opportunities.</b></p>
+                                        <p className="abhmdesc">{aboutUs.kjsit}</p>
                                     </div>
                                 </div>
                             </div>
@@ -108,7 +116,7 @@ export default function IAbout() {
                                         <Link to="/">
                                             <img src={IETLogo} className="kLogo" />
                                         </Link>
-                                        <p className="abhmdesc">The hackathon will be a <b>24-hour offline intensive competition</b> where teams of developers, designers, and innovators will come together to create solutions in the <b>domains of Blockchain, Artificial Intelligence, Machine Learning, AR/VR</b>. Shortlisting of teams will be done after the registration process and <b>15-20 teams</b> will shortlisted based on their profiles and problem statements. Innovative, creative and societal based problem statements will be focused in our Hackathon. Our hackathon will be an <b>Aurora for enthusiastic developers to build creative projects and get opportunities.</b></p>
+                                        <p className="abhmdesc">{aboutUs.iet}</p>
                                     </div>
                                 </div>
                             </div>
@@ -128,7 +136,7 @@ export default function IAbout() {
                                         <Link to="/">
                                             <img src={postmanLogo} className="kLogo" />
                                         </Link>
-                                        <p className="abhmdesc">The hackathon will be a <b>24-hour offline intensive competition</b> where teams of developers, designers, and innovators will come together to create solutions in the <b>domains of Blockchain, Artificial Intelligence, Machine Learning, AR/VR</b>. Shortlisting of teams will be done after the registration process and <b>15-20 teams</b> will shortlisted based on their profiles and problem statements. Innovative, creative and societal based problem statements will be focused in our Hackathon. Our hackathon will be an <b>Aurora for enthusiastic developers to build creative projects and get opportunities.</b></p>
+                                        <p className="abhmdesc">{aboutUs.postman}</p>
                                     </div>
                                 </div>
                             </div>
