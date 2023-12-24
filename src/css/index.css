@@ -2,6 +2,7 @@
 
 :root {
     --purple1: rgb(234, 0, 255);
+    --max-sizeC: 0;
 }
 
 * {
@@ -15,6 +16,7 @@
 
 body {
     scroll-behavior: smooth;
+    background: black;
 }
 
 /* #root,
@@ -69,6 +71,10 @@ body {
     height: 100%;
 }
 
+.blendContainer * {
+    transition: 0.5s all ease-out;
+}
+
 .cursor-dot {
     z-index: 100000;
     position: absolute;
@@ -113,10 +119,26 @@ body {
     background-size: cover; */
     /* filter: blur(1rem); */
     /* box-shadow: 0 0 transparent; */
-    background: #272640;
-    background: black;
+    /* background: #272640;
+    background: black; */
+    background-image: url("/src/assets/hack-ai/hm6.jpg");
+    background-color: linear-gradient(180deg, rgba(255, 255, 255, 0.4962359943977591) 0%, rgba(217, 217, 217, 0.5158438375350141) 25%, rgba(149, 149, 149, 0.5298494397759104) 49%, rgba(92, 92, 92, 0.5242471988795518) 70%, rgba(52, 52, 52, 0.5130427170868348) 100%);
+    /* background-image: ; */
+    background-repeat: no-repeat;
+    background-size: cover;
     padding-top: 3rem;
     height: 100%;
+}
+
+.mainContainer {
+    background-image: url("/src/assets/hack-ai/hm6.jpg");
+    background-color: linear-gradient(180deg, rgba(255, 255, 255, 0.4962359943977591) 0%, rgba(217, 217, 217, 0.5158438375350141) 25%, rgba(149, 149, 149, 0.5298494397759104) 49%, rgba(92, 92, 92, 0.5242471988795518) 70%, rgba(52, 52, 52, 0.5130427170868348) 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.loadBeforeBG {
+    background: black;
 }
 
 .MidCH {
@@ -124,10 +146,13 @@ body {
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    gap: 2rem;
+    /* gap: 2rem; */
     z-index: 5;
-    padding: 2rem;
+    /* padding: 2rem; */
+    gap: 10vh;
+    /* height: 70vh; */
     padding-top: 4rem;
+    /* margin: 2rem 0; */
 }
 
 .MidCH .d1 {
@@ -440,6 +465,179 @@ body {
 
 }
 
+.outerDiv {
+    position: absolute;
+    /* top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: transparent;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1000;
+    opacity: 1;
+    overflow: hidden;
+    box-sizing: border-box; */
+    animation: animODA 1.5s linear;
+    overflow: hidden;
+    background: black;
+}
+
+@keyframes animODA {
+    0% {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        width: 100vw;
+        height: 100vh;
+        z-index: 1000;
+        opacity: 1;
+        overflow: hidden;
+        box-sizing: border-box;
+    }
+
+    99% {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: black;
+        width: 100vw;
+        height: 100vh;
+        z-index: 1000;
+        opacity: 1;
+        overflow: hidden;
+        box-sizing: border-box;
+    }
+
+    100% {
+        width: 0;
+        height: 0;
+        background: transparent;
+        /* z-index: -10; */
+        display: none;
+    }
+}
+
+.outerDiv * {
+    /* content: ""; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: calc(var(--max-sizeC) + 10rem);
+    width: calc(var(--max-sizeC) + 10rem);
+    border-radius: 50%;
+    z-index: 0;
+    overflow: hidden;
+
+}
+
+.outsiderAn1 {
+    z-index: 1;
+    animation: animOuterAnim 0.4s linear;
+
+    animation-delay: 1s;
+}
+
+.outsiderAn2 {
+    z-index: 2;
+    animation: animOuterAnim2 0.4s linear;
+
+    animation-delay: 0.5s;
+}
+
+.outsiderAn3 {
+    z-index: 3;
+    animation: animOuterAnim3 0.4s linear;
+
+}
+
+@keyframes animOuterAnim {
+    0% {
+        background: black;
+        height: calc(var(--max-sizeC) + 10rem);
+        width: calc(var(--max-sizeC) + 10rem);
+        opacity: 1;
+        z-index: 1;
+    }
+
+    60% {
+        height: calc(var(--max-sizeC) / 2);
+        width: calc(var(--max-sizeC) / 2);
+        opacity: 1;
+    }
+
+
+
+    98% {
+        height: 0;
+        width: 0;
+        opacity: 1;
+    }
+
+    99% {
+        display: none;
+        z-index: -1;
+    }
+}
+
+@keyframes animOuterAnim2 {
+    0% {
+        background: aqua;
+        height: calc(var(--max-sizeC) + 10rem);
+        width: calc(var(--max-sizeC) + 10rem);
+        opacity: 1;
+        z-index: 2;
+    }
+
+    60% {
+        height: calc(var(--max-sizeC) / 2);
+        width: calc(var(--max-sizeC) / 2);
+        opacity: 1;
+    }
+
+    98% {
+        height: 0;
+        width: 0;
+        opacity: 1;
+    }
+
+    99% {
+        display: none;
+        z-index: -1;
+    }
+}
+
+@keyframes animOuterAnim3 {
+    0% {
+        background: rgb(131, 0, 98);
+        height: calc(var(--max-sizeC) + 10rem);
+        width: calc(var(--max-sizeC) + 10rem);
+        opacity: 1;
+        z-index: 3;
+    }
+
+    60% {
+        height: calc(var(--max-sizeC) / 2);
+        width: calc(var(--max-sizeC) / 2);
+        opacity: 1;
+    }
+
+
+    98% {
+        height: 0;
+        width: 0;
+        opacity: 1;
+    }
+
+    99% {
+        display: none;
+        z-index: -1;
+    }
+}
+
 @keyframes animHeader3d {
     0% {
         font-size: 40rem;
@@ -459,11 +657,12 @@ body {
 
 .countD {
     padding: 0.8rem;
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(0, 0, 0, 0.4);
     border-radius: 1rem;
     gap: 0.5rem;
     backdrop-filter: blur(0.5rem);
     margin-bottom: 0.5rem;
+    border: 0.1rem solid rgba(255, 255, 255, 0.4);
 }
 
 .fColon {
@@ -473,14 +672,17 @@ body {
 }
 
 .countCard {
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(0.5rem);
     padding: 0.4rem;
     font-size: 1.5rem;
     border-radius: 1rem;
     font-weight: bold;
     width: 5rem;
     height: 5rem;
+    color: white;
     text-shadow: 0 0 0.5rem purple;
+    border: 0.1rem solid rgba(255, 255, 255, 0.6);
 }
 
 .countTit {
@@ -680,3 +882,5 @@ body {
         left: 0;
     }
 }
+
+.mainContainer {}

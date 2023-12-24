@@ -27,7 +27,7 @@
 }
 
 .hmKhaas {
-    height: 4rem;
+    height: 3.5rem;
     /* border-radius: 50%; */
 }
 
@@ -55,6 +55,7 @@
     color: white;
     font-size: 1.8rem;
     margin-right: 1rem;
+    transform: rotate(-90deg);
 }
 
 .menSlider {
@@ -64,17 +65,19 @@
     width: 100%;
     background: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(1rem);
-    top: -100%;
+    left: -100%;
+    opacity: 0;
     transition: 0.3s all ease-out;
     overflow: hidden;
 }
 
 .openSlider {
-    top: 0 !important;
+    left: 0 !important;
+    opacity: 1 !important;
 }
 
 .openM {
-    transform: rotate(180deg);
+    transform: rotate(90deg);
 }
 
 .allLinks {

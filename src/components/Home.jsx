@@ -22,10 +22,12 @@ import "../css/index.css";
 extend({ OrbitControls });
 
 
+
+
 function LoaderBeforeModel() {
     return (
         <>
-            <div className="mainContainer">
+            <div className="mainContainer loadBeforeBG">
                 <div class="lines">
                     <div class="line"></div>
                     <div class="line"></div>
@@ -37,27 +39,30 @@ function LoaderBeforeModel() {
                 <div className="loadBeB divf fdirc">
                     <div className="divf logoCon loadBeDI">
                         <motion.img
-                            initial={{ x: -40 }}
-                            whileInView={{ x: 0 }}
-                            transition={{ duration: 0.4, ease: "easeOut", type: "spring" }}
+                            initial={{ x: -40, opacity: 0 }}
+                            whileInView={{ x: 0, opacity: 1 }}
+                            transition={{ duration: 0.2, type: "spring" }}
                             src={IETLogo} className="logo1" />
-                        <p className="xForLogo"
-                            initial={{ scale: 0 }}
-                            whileInView={{ scale: 1 }}
-                            transition={{ duration: 0.2, delay: 0.4, ease: "easeOut", type: "spring" }}
-                        >X</p>
+                        <motion.p className="xForLogo"
+                            initial={{ scale: 0, opacity: 0 }}
+                            whileInView={{ scale: 1, opacity: 1 }}
+                            transition={{ duration: 0.2, delay: 0.7, type: "spring" }}
+                        >X</motion.p>
                         <motion.img
-                            initial={{ x: 40 }}
-                            whileInView={{ x: 0 }}
-                            transition={{ duration: 0.4, ease: "easeOut", type: "spring" }}
+                            initial={{ x: 40, opacity: 0 }}
+                            whileInView={{ x: 0, opacity: 1 }}
+                            transition={{ duration: 0.2, delay: 0.4, type: "spring" }}
                             src={postmanLogo} className="logo1" />
                     </div>
-                    <p
-                        initial={{ y: -40 }}
-                        whileInView={{ y: 0 }}
-                        transition={{ duration: 0.5, delay: 1, ease: "easeOut", type: "spring" }}
-                        className="pres">Presents....</p>
+                    <motion.p
+                        initial={{ y: -40, opacity: 0 }}
+                        whileInView={{ y: 0, opacity: 1 }}
+                        transition={{ duration: 0.5, delay: 1, type: "spring" }}
+                        className="pres">Presents....</motion.p>
                 </div>
+                {/* <div className="animLoaderD">
+
+                </div> */}
             </div>
         </>
     )
@@ -87,12 +92,12 @@ function LoadTheModel() {
 export function BgOptional() {
     return (
         <div id="idOptMB" className="mainContainer mainToBack">
-            <div className="blurAn">
+            {/* <div className="blurAn">
                 <div className="b1"></div>
                 <div className="b2"></div>
                 <div className="b3"></div>
                 <div className="b4"></div>
-            </div>
+            </div> */}
             <div class="lines">
                 <div class="line"></div>
                 <div class="line"></div>
@@ -141,24 +146,40 @@ export default function Home() {
         let unmounted = false;
         setTimeout(() => {
             setHTitle(true);
-        }, 2000)
+        }, 3500)
         return () => (unmounted = true);
     }, [])
 
+    useEffect(() => {
+        const root_theme = document.querySelector(':root');
+        // const root_btn = document.querySelector('.btn-css-v');
+        // root_btn.addEventListener('click', () => {
 
+        if (window.screen.height > window.screen.width) {
+            root_theme.style.setProperty('--max-sizeC', '110vh');
+        }
+        else {
+            root_theme.style.setProperty('--max-sizeC', '110vw');
+        }
+
+        // })
+    }, [])
 
 
     return (
         <>
 
-            <div className="divf fdirc mainbg">
 
-                {homeB ?
+            {/* <LoaderBeforeModel /> */}
+            {homeB ?
+                <div className="divf fdirc mainbg">
                     <LoaderBeforeModel />
-                    :
-                    <></>}
-                {hTitle ?
-                    <>
+                </div>
+                :
+                <></>}
+            {hTitle ?
+                <>
+                    <div className="divf fdirc mainbg">
                         <Navbar />
                         <div className="mainC blendContainer">
 
@@ -166,6 +187,7 @@ export default function Home() {
                         <LoadTheModel />
                         : <></>
                     } */}
+
                             <BgOptional />
                             {/* <div > */}
                             {/* <Suspense fallback={<null />}>
@@ -187,9 +209,9 @@ export default function Home() {
 
 
 
-                            <div className="divf fdirc fullWH MidCH ">
+                            <div className="divf fdirc fullWH  MidCH ">
                                 <div className="divf fdirc d1">
-                                    <img src={HackmelaI} className="hackTitle1" />
+                                    {/* <img src={HackmelaI} className="hackTitle1" /> */}
                                     <Header3d />
                                 </div>
                                 <div className="divf fdirc d2">
@@ -201,10 +223,10 @@ export default function Home() {
                             <button className="learnMoreB specB1" onClick={(e) => learnMoreC(e)}>Learn More</button>
                         </div>
                         <div id="idExDot" className="expandDotB"></div>
-                    </>
-                    : <></>
-                }
-            </div >
+                    </div>
+                </>
+                : <></>
+            }
 
         </>
     )
