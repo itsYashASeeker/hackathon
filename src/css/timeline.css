@@ -394,6 +394,11 @@ input:focus {
     padding: 1rem;
 }
 
+.timelKhas{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
 .s2HT {
     font-size: 2.3rem;
     font-weight: 600;

@@ -183,7 +183,7 @@ export default function InfoHome() {
 
                                     {/* </div> */}
 
-                                    <p className="abhmdesc">The hackathon will be a <b>24-hour offline intensive competition</b> where teams of developers, designers, and innovators will come together to create solutions in the <b>domains of Blockchain, Artificial Intelligence, Machine Learning, AR/VR</b>. Shortlisting of teams will be done after the registration process and <b>20 teams</b> will shortlisted based on their profiles and problem statements. Innovative, creative and societal based problem statements will be focused in our Hackathon. Our hackathon will be an <b>Aurora for enthusiastic developers to build creative projects and get opportunities.</b></p>
+                                    <p className="abhmdesc">The hackathon will be a <b>24-hour offline intensive competition</b> where teams of developers, designers, and innovators will come together to create solutions in the <b>domains of Blockchain, Artificial Intelligence, Machine Learning, AR/VR</b>. Shortlisting of teams will be done after the registration process and teams will be shortlisted based on their profiles and problem statements. Innovative, creative and societal based problem statements will be focused in our Hackathon. Our hackathon will be an <b>Aurora for enthusiastic developers to build creative projects and get opportunities.</b></p>
                                     {/* </div> */}
                                     <div className="divf allCAbH">
                                         <div className="divf fdirc indCard">
@@ -195,7 +195,7 @@ export default function InfoHome() {
                                                 <p>2 & 3 Mar, 2024</p>
                                             </div>
                                         </div>
-                                        <div className="divf fdirc indCard">
+                                        {/* <div className="divf fdirc indCard">
                                             <div className="divf indCHead">
                                                 <FontAwesomeIcon icon={faPeopleGroup} />
                                                 <p>Shortlist</p>
@@ -203,7 +203,7 @@ export default function InfoHome() {
                                             <div className="indCMain">
                                                 <p>20 Teams</p>
                                             </div>
-                                        </div>
+                                        </div> */}
                                         <div className="divf fdirc indCard">
                                             <div className="divf indCHead">
                                                 <FontAwesomeIcon icon={faPeopleGroup} />
